@@ -4,29 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bebe2d01-676e-4d05-a86f-3bae0fc749ae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../dpdp_lab4/src/main/java/ActorKeeper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dpdp_lab4/src/main/java/ActorRouter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dpdp_lab4/src/main/java/ActorTester.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dpdp_lab4/src/main/java/TestBody.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dpdp_lab4/src/main/java/TestResult.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dpdp_lab2/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dpdp_lab2/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dpdp_lab4/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dpdp_lab4/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dpdp_lab4/src/main/java/TestingApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dpdp_lab4/src/main/java/TestingApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../untitled/pom.xml" beforeDir="false" />
-    </list>
+    <list default="true" id="bebe2d01-676e-4d05-a86f-3bae0fc749ae" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -40,6 +25,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
