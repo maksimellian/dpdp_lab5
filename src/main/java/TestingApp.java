@@ -8,6 +8,7 @@ import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.model.Query;
+import akka.japi.Pair;
 import akka.stream.ActorMaterializer;
 import akka.stream.ActorMaterializerHelper;
 import akka.stream.javadsl.Flow;
@@ -41,7 +42,7 @@ public class TestingApp {
                     Query query = r.getUri().query();
                     String url = query.getOrElse(URL, HOST);
                     int count = Integer.parseInt(query.getOrElse(COUNT, "1"));
-                    return new Pair<>
+                    return new Pair<>(url, count)
                 })
         }
     }
