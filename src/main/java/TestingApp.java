@@ -14,6 +14,6 @@ public class TestingApp {
         ActorRef actorCasher = system.actorOf(Props.create(ActorCasher.class), "cash");
         final Http http = Http.get(system);
         final ActorMaterializer materializer = ActorMaterializer.create(system);
-        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = createFlow(materializer, actorCasher;
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = createFlow(materializer, actorCasher);
     }
 }
