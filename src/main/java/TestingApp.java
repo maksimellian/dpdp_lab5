@@ -56,7 +56,8 @@ public class TestingApp {
                             if ((float) t >= 0) return CompletableFuture.completedFuture(new Pair<>(p.first(), (float)t));
                             return Source.from(Collection.singletonList(p))
                                     .toMat(formSink(p.second()), Keep.right())
-                                    .run()
+                                    .run(materializer)
+                                    .
                         }))
         }
     }
