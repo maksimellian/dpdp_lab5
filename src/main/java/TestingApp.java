@@ -43,7 +43,8 @@ public class TestingApp {
                     String url = query.getOrElse(URL, HOST);
                     int count = Integer.parseInt(query.getOrElse(COUNT, "1"));
                     return new Pair<>(url, count);
-                }).
+                })
+                .
         }
     }
 }
