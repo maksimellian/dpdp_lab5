@@ -28,5 +28,6 @@ public class TestingApp {
                 ConnectHttp.toHost(HOST, PORT),
                 materializer
         );
+        System.in.read();
     }
 }
