@@ -9,6 +9,7 @@ import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.model.Query;
 import akka.japi.Pair;
+import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
 import akka.stream.ActorMaterializerHelper;
 import akka.stream.javadsl.Flow;
@@ -44,7 +45,8 @@ public class TestingApp {
                     int count = Integer.parseInt(query.getOrElse(COUNT, "1"));
                     return new Pair<>(url, count);
                 })
-                .mapAsync(2, (Pair<String, Integer> p) -> )
+                .mapAsync(2, (Pair<String, Integer> p) ->
+                        Patterns.ask())
         }
     }
 }
