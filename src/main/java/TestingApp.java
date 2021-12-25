@@ -18,6 +18,7 @@ import akka.stream.javadsl.Source;
 
 import java.time.Duration;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
@@ -54,7 +55,7 @@ public class TestingApp {
                 .mapAsync(2, (Pair<String, Integer> p) ->
                         Patterns.ask(casher, p.first(), TIMEOUT).thenCompose((Object t) -> {
                             if ((float) t >= 0) return CompletableFuture.completedFuture(new Pair<>(p.first(), (float)t));
-                            return Source.from(Collection.singletonList(p))
+                            return Source.from(Collections.singletonList(p))
                                     .toMat(formSink(p.second()), Keep.right())
                                     .run(materializer)
                                     .thenApply(time -> {
