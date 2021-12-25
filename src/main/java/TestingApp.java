@@ -66,6 +66,18 @@ public class TestingApp {
                             return HttpResponse.create().withEntity("Result: " + r.first() + ": " + r.second() + "\n");
                 });
         }
-        private static Sink
+    private static Sink<Pair<String, Integer>, CompletionStage<Long>> formSink(int reqAmmount) {
+        return Flow.<Pair<String, Integer>>create()
+                .mapConcat(pr -> new ArrayList<>(Collections.nCopies(pr.second(), pr.first())))
+                .mapAsync(reqAmmount, (String url) -> {
+                    AsyncHttpClient client = asyncHttpClient();
+                    long startTime = System.currentTimeMillis();
+                    client.prepareGet(url).execute();
+                    long resultTime = System.currentTimeMillis() - startTime;
+                    l.info("Connected to {} within {} milliseconds", url, resultTime);
+                    return CompletableFuture.completedFuture(resultTime);
+                })
+                .toMat(Sink.fold(0L, Long::sum), Keep.right());
+    }
     }
 }
