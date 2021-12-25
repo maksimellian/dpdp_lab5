@@ -44,7 +44,7 @@ public class TestingApp {
                     int count = Integer.parseInt(query.getOrElse(COUNT, "1"));
                     return new Pair<>(url, count);
                 })
-                .mapAsync(2, (Pair<String, >))
+                .mapAsync(2, (Pair<String, Integer>))
         }
     }
 }
