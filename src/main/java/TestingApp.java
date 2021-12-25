@@ -61,7 +61,7 @@ public class TestingApp {
                                     .thenApply(time -> {
                                         System.out.println("Average time for {}: {}", p.first(), (float)time/p.second());
                                     });
-                        }))
+                        })).mapAsync()
         }
     }
 }
