@@ -17,7 +17,7 @@ import java.util.concurrent.CompletionStage;
 public class TestingApp {
     private static final String HOST = "localhost";
     private static final int PORT = 8080;
-    private static final 
+    private static final String URL = "connect";
 
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create();
