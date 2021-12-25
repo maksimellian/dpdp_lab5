@@ -50,7 +50,7 @@ public class TestingApp {
                 })
                 .mapAsync(2, (Pair<String, Integer> p) ->
                         Patterns.ask(casher, p.first(), TIMEOUT).thenCompose((Object t) -> {
-                            if ((float) t >= 0) return CompletableFuture.completedFuture(new Pair<>(p.first()))
+                            if ((float) t >= 0) return CompletableFuture.completedFuture(new Pair<>(p.first(), (float)t))
                         }))
         }
     }
