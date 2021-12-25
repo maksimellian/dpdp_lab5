@@ -38,7 +38,7 @@ public class TestingApp {
         return Flow.of(HttpRequest.class)
                 .map((r) -> {
                     Query query = r.getUri().query();
-                    String url = 
+                    String url = query
                 })
         }
     }
