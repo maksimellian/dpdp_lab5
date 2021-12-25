@@ -57,7 +57,7 @@ public class TestingApp {
                             return Source.from(Collection.singletonList(p))
                                     .toMat(formSink(p.second()), Keep.right())
                                     .run(materializer)
-                                    .
+                                    .thenApply
                         }))
         }
     }
