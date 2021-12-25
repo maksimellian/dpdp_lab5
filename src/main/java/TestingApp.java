@@ -59,7 +59,7 @@ public class TestingApp {
                                     .toMat(formSink(p.second()), Keep.right())
                                     .run(materializer)
                                     .thenApply(time -> {
-                                        System.out.println("");
+                                        System.out.println("Average time for {}: {}", p.first(), (float)time/p.second());
                                     })
                         }))
         }
