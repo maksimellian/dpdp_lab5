@@ -29,6 +29,6 @@ public class TestingApp {
                 materializer
         );
         System.in.read();
-        binding.thenCompose()
+        binding.thenCompose(ServerBinding)
     }
 }
