@@ -42,8 +42,8 @@ public class TestingApp {
                     Query query = r.getUri().query();
                     String url = query.getOrElse(URL, HOST);
                     int count = Integer.parseInt(query.getOrElse(COUNT, "1"));
-                    return new Pair<>(url, count)
-                })
+                    return new Pair<>(url, count);
+                }).
         }
     }
 }
