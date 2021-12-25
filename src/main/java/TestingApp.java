@@ -54,7 +54,7 @@ public class TestingApp {
                         Patterns.ask(casher, p.first(), TIMEOUT).thenCompose((Object t) -> {
                             if ((float) t >= 0) return CompletableFuture.completedFuture(new Pair<>(p.first(), (float)t));
                             return Source.from(Collection.singletonList(p))
-                                    .
+                                    .toMat()
                         }))
         }
     }
