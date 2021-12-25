@@ -11,6 +11,7 @@ import akka.http.javadsl.model.Query;
 import akka.stream.ActorMaterializer;
 import akka.stream.ActorMaterializerHelper;
 import akka.stream.javadsl.Flow;
+import jdk.internal.net.http.common.Pair;
 
 import java.util.concurrent.CompletionStage;
 
@@ -41,7 +42,7 @@ public class TestingApp {
                     Query query = r.getUri().query();
                     String url = query.getOrElse(URL, HOST);
                     int count = Integer.parseInt(query.getOrElse(COUNT, "1"));
-                    return new Pair
+                    return new Pair<>
                 })
         }
     }
