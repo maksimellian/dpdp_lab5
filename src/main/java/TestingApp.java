@@ -14,6 +14,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.ActorMaterializerHelper;
 import akka.stream.javadsl.Flow;
 
+import java.time.Duration;
 import java.util.concurrent.CompletionStage;
 
 public class TestingApp {
@@ -21,6 +22,7 @@ public class TestingApp {
     private static final int PORT = 8080;
     private static final String URL = "connect";
     private static final String COUNT = "repeat";
+    private final static Duration TIMEOUT = Duration.ofSeconds(5);
 
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create();
