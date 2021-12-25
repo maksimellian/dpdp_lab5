@@ -8,6 +8,7 @@ import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.stream.ActorMaterializer;
+import akka.stream.ActorMaterializerHelper;
 import akka.stream.javadsl.Flow;
 
 import java.util.concurrent.CompletionStage;
@@ -32,5 +33,5 @@ public class TestingApp {
         binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
     }
 
-    private static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(Acto)
+    private static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(ActorMaterializer)
 }
