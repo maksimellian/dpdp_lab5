@@ -62,7 +62,7 @@ public class TestingApp {
                                         System.out.println("Average time for {}: {}", p.first(), (float)time/p.second());
                                     });
                         })).map((r) -> {
-                            casher.tell(new StoreMessage(r.first(), r.second()), ActorRef.noSender())
+                            casher.tell(new StoreMessage(r.first(), r.second()), ActorRef.noSender());
                 })
         }
     }
