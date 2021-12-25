@@ -13,6 +13,7 @@ import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
 import akka.stream.ActorMaterializerHelper;
 import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Keep;
 import akka.stream.javadsl.Source;
 
 import java.time.Duration;
@@ -54,7 +55,7 @@ public class TestingApp {
                         Patterns.ask(casher, p.first(), TIMEOUT).thenCompose((Object t) -> {
                             if ((float) t >= 0) return CompletableFuture.completedFuture(new Pair<>(p.first(), (float)t));
                             return Source.from(Collection.singletonList(p))
-                                    .toMat(formSink(p.second()), )
+                                    .toMat(formSink(p.second()), Keep.right())
                         }))
         }
     }
