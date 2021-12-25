@@ -60,7 +60,7 @@ public class TestingApp {
                                     .run(materializer)
                                     .thenApply(time -> {
                                         System.out.println("Average time for {}: {}", p.first(), (float)time/p.second());
-                                    })
+                                    });
                         }))
         }
     }
