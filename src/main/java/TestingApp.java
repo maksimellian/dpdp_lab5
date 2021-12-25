@@ -9,7 +9,8 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 public class TestingApp {
-    private static final 
+    private static final String HOST = localhost;
+
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create();
         ActorRef actorCasher = system.actorOf(Props.create(ActorCasher.class), "cash");
