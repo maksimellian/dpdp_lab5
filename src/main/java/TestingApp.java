@@ -48,7 +48,9 @@ public class TestingApp {
                     return new Pair<>(url, count);
                 })
                 .mapAsync(2, (Pair<String, Integer> p) ->
-                        Patterns.ask(casher, p.first(), TIMEOUT).thenCompose((Object t) ->))
+                        Patterns.ask(casher, p.first(), TIMEOUT).thenCompose((Object t) -> {
+                            
+                        }))
         }
     }
 }
