@@ -9,7 +9,8 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 public class TestingApp {
-    private static final String HOST = localhost;
+    private static final String HOST = "localhost";
+    private st
 
     public static void main(String[] args) {
         ActorSystem system = ActorSystem.create();
