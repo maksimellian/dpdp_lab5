@@ -63,7 +63,7 @@ public class TestingApp {
                                     });
                         })).map((r) -> {
                             casher.tell(new StoreMessage(r.first(), r.second()), ActorRef.noSender());
-                            return HttpResponse
+                            return HttpResponse.create()
                 })
         }
     }
