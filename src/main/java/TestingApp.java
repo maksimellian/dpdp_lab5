@@ -13,6 +13,7 @@ import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
 import akka.stream.ActorMaterializerHelper;
 import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Source;
 
 import java.time.Duration;
 import java.util.Collection;
@@ -52,7 +53,7 @@ public class TestingApp {
                 .mapAsync(2, (Pair<String, Integer> p) ->
                         Patterns.ask(casher, p.first(), TIMEOUT).thenCompose((Object t) -> {
                             if ((float) t >= 0) return CompletableFuture.completedFuture(new Pair<>(p.first(), (float)t));
-                            return Source.from(Collection.singletonList(p))
+                            return Source.from(Collection.singletonList(p));
                         }))
         }
     }
